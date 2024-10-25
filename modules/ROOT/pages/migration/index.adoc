@@ -319,8 +319,8 @@ Removed the `@cypher` fields not usable as sort fields from the `sort` argument.
 
 There were some circumstances where a `@cypher` field was incorrectly present in the `sort` argument, such as:
 
-  - `@cypher` fields with no-nullable arguments.
-  - `@cypher` fields with not sortable type like `Node`, `List` etc ... .
+  - `@cypher` fields with non nullable arguments.
+  - `@cypher` fields with non sortable type like `Node`, `List` etc ... .
 
 
 == Additions
