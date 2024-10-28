@@ -313,6 +313,14 @@ The following fields have been added:
   - `deprecatedOptionsArgument`
   - `directedArgument`
 
+=== Removed some `@cypher` fields from the sort argument
+
+The following `@cypher` field types have been removed from the `sort` argument because they are not usable as sort fields:
+
+  - `@cypher` fields with non-nullable arguments.
+  - `@cypher` fields with non-sortable type like `Node`, `List` etc.
+
+
 == Additions
 
 === Added the `_EQ` filter as an alternative to the deprecated implicit equal filters
