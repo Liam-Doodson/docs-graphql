@@ -9,3 +9,5 @@ This section covers:
 * xref:subscriptions/getting-started.adoc[Getting started] - How to get started with subscriptions by setting up a basic example.
 * xref:subscriptions/events.adoc[Events] - How to trigger events when using `@neo4j/graphql`.
 * xref:subscriptions/filtering.adoc[Filtering] - How to apply filters to subscriptions.
+
+Also see xref:security/subscriptions-authorization.adoc[] in the Security section.
