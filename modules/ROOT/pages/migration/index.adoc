@@ -535,4 +535,4 @@ Following the deprecation of the `directed` argument, the values accepted by the
 - `DIRECTED_ONLY` is renamed to `DIRECTED`.
 - `UNDIRECTED_ONLY` is renamed to `UNDIRECTED`.
 
-A warning is raised if a you use a deprecated value.
+A warning is raised if you use a deprecated value.
