@@ -4,3 +4,5 @@ version: '6'
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/content-nav.adoc
+page-add-notes-module: ROOT
+page-add-notes-tags: note
