@@ -62,7 +62,7 @@ This is the standard way of modeling a relationship with the GraphQL Library.
 However, it is not a requirement of the type definitions themselves as relationships can deliberately be underspecified, for example to limit access through the API layer.
 ====
 
-See also: xref::/directives/schema-configuration/field-configuration/#_relationship[`@relationship` field configuration].
+See also: xref::/directives/schema-configuration/field-configuration#_relationship[`@relationship` field configuration].
 
 == `@relationshipProperties`
 
