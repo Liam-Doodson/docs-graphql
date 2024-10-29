@@ -6,7 +6,8 @@ Subscriptions require their own authorization rules, which are configured with t
 
 == `@subscriptionsAuthorization`
 
-Rules for subscriptions authorization are different to normal authorization rules because only filtering rules are available for subscriptions events and subscriptions events have more limitations in how they can be filtered.
+Rules for subscriptions authorization are different to normal authorization rules.
+Only filtering rules are available for subscriptions events and there are more limitations in how they can be filtered.
 
 All subscriptions authorization rules have an implied requirement for authentication, given that the rules are normally evaluated against values in the JWT payload.
 

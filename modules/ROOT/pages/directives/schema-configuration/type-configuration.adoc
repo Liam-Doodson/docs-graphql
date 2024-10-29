@@ -188,7 +188,16 @@ type SomeType {
 
 === Definition
 
-// tba
+[source, graphql, indent=0]
+----
+"""
+Instructs @neo4j/graphql to use the given value as the plural of the type name
+"""
+directive @plural(
+  """The value to use as the plural of the type name."""
+  value: String!
+) on OBJECT | INTERFACE | UNION
+----
 
 === Usage
 

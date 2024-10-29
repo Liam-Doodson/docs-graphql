@@ -150,7 +150,13 @@ Filtering can be configured for additional JWT claims using the `@jwt` directive
 
 ==== Definition
 
-// tba
+[source, graphql, indent=0]
+----
+"""
+Instructs @neo4j/graphql that the flagged object represents the relevant JWT payload
+"""
+directive @jwt on OBJECT
+----
 
 ==== Usage
 
@@ -173,7 +179,18 @@ You can use any name as long as it is decorated with the `@jwt` directive.
 
 ==== Definition
 
-// tba
+[source, graphql, indent=0]
+----
+"""
+Instructs @neo4j/graphql that the flagged field has a mapped path within the JWT Payload.
+"""
+directive @jwtClaim(
+  """
+  The path of the field in the real JWT as mapped within the JWT Payload.
+  """
+  path: String!
+) on FIELD_DEFINITION
+----
 
 ==== Usage
 

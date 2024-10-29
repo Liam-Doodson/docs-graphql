@@ -170,7 +170,8 @@ query {
 
 === Definition
 
-Unique node property constraints map to `@unique` directives used in your type definitions, which has the following definition:
+Unique node property constraints map to `@unique` directives used in your type definitions.
+They have the following definition:
 
 [source, graphql, indent=0]
 ----
@@ -181,8 +182,9 @@ directive @unique(
 ) on FIELD_DEFINITION
 ----
 
-Using this directive does not automatically ensure the existence of these constraints, and you will need to run a function on server startup. 
-See the section xref::/directives/indexes-and-constraints.adoc#_asserting_constraints[Asserting constraints] for details.
+Using this directive does not automatically ensure the existence of these constraints.
+Run a function on server startup.
+See section xref::/directives/indexes-and-constraints.adoc#_asserting_constraints[Asserting constraints] for details.
 
 === Usage
 

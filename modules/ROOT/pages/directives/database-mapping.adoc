@@ -12,7 +12,28 @@ Each type in your GraphQL type definitions can be mapped to an entity in your Ne
 
 === Definition
 
-// tba
+[source, graphql, indent=0]
+----
+"""
+Instructs @neo4j/graphql to treat this field as a relationship. Opens up the ability to create and connect on this field.
+"""
+directive @relationship(
+  type: String!
+  """Valid and default directions for this relationship."""
+  queryDirection: RelationshipQueryDirection = DEFAULT_DIRECTED
+  direction: RelationshipDirection!
+  """
+  The name of the interface containing the properties for this relationship.
+  """
+  properties: String
+  """
+  Prevent all but these operations from being generated for this relationship
+  """
+  nestedOperations: [RelationshipNestedOperations!]! = [CREATE, UPDATE, DELETE, CONNECT, DISCONNECT, CONNECT_OR_CREATE]
+  """Prevent aggregation for this relationship"""
+  aggregate: Boolean = true
+) on FIELD_DEFINITION
+----
 
 === Usage
 
@@ -37,11 +58,11 @@ type Actor {
 [NOTE]
 ====
 The `@relationship` directive is used twice, once on each end of the relationship.
-This is the standard way of modeling a relationship with the GraphQL library.
-However, it is not a requirement of the type definitions themselves and relationships can deliberately be underspecified, for example to limit access through the API layer.
+This is the standard way of modeling a relationship with the GraphQL Library.
+However, it is not a requirement of the type definitions themselves as relationships can deliberately be underspecified, for example to limit access through the API layer.
 ====
 
- Also see xref::/directives/schema-configuration/field-configuration/#_relationship[`@relationship` field configuration].
+See also: xref::/directives/schema-configuration/field-configuration/#_relationship[`@relationship` field configuration].
 
 == `@relationshipProperties`
 
@@ -86,7 +107,14 @@ For more information, see xref::/types/relationships.adoc[Type definitions -> Re
 
 === Definition
 
-// tba
+[source, graphql, indent=0]
+----
+"""Informs @neo4j/graphql of node metadata"""
+directive @node(
+  """The labels to map this GraphQL type to in the Neo4j database"""
+  labels: [String!]
+) on OBJECT
+----
 
 === Usage
 
@@ -254,7 +282,16 @@ await startStandaloneServer(server, {
 
 === Definition
 
-// tba
+[source, graphql, indent=0]
+----
+"""
+Instructs @neo4j/graphql to map a GraphQL field to a Neo4j node or relationship property.
+"""
+directive @alias(
+  """The name of the Neo4j property"""
+  property: String!
+) on FIELD_DEFINITION
+----
 
 === Usage
 
