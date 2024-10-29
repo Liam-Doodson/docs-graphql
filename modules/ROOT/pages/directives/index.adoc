@@ -105,10 +105,10 @@ Particularly useful for types that are not correctly pluralized or are non-Engli
 |===
 | Directive | Description
 
-| xref::/directives/indexes-and-constraints.adoc#_fulltext_indexes[`@fulltext`]
+| xref::/directives/indexes-and-constraints.adoc#_fulltext[`@fulltext`]
 | Indicates that there should be a fulltext index inserted into the database for the specified Node and its properties.
 
-| xref::/directives/indexes-and-constraints.adoc#_unique_node_property_constraints[`@unique`]
+| xref::/directives/indexes-and-constraints.adoc#_unique[`@unique`]
 | Indicates that there should be a uniqueness constraint in the database for the fields that it is applied to.
 
 | xref::/directives/indexes-and-constraints.adoc#_vector_index_search[`@vector`]

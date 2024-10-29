@@ -187,7 +187,7 @@ type Dog @node(labels: ["K9", "Dog"]) {
 }
 ----
 
-See xref::/directives/indexes-and-constraints.adoc#_unique_node_property_constraints[`@unique`] to learn more about the `@unique` directive.
+See xref::/directives/indexes-and-constraints.adoc#_unique[`@unique`] to learn more about the `@unique` directive.
 
 
 ==== Using `$jwt` and `$context`

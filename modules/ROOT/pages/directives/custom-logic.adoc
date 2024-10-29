@@ -558,7 +558,7 @@ new Neo4jGraphQL({
 })
 ----
 
-=== Context values
+==== Context values
 
 The GraphQL context for the request is available as the third argument in a callback. 
 This maps to the argument pattern for GraphQL resolvers.
