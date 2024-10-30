@@ -323,8 +323,7 @@ The following `@cypher` field types have been removed from the `sort` argument b
 
 === Removed `connectComponentsPlanner` from `cypherQueryOptions`
 
-Following the deprecation of the `connectComponentsPlanner` https://neo4j.com/docs/cypher-manual/current/planning-and-tuning/query-tuning/#cypher-connect-components-planner, 
-the field `connectComponentsPlanner` is no longer accepted in the Context and is removed from the `cypherQueryOptions` object.
+Following the deprecation of the link:https://neo4j.com/docs/cypher-manual/current/planning-and-tuning/query-tuning/#cypher-connect-components-planner[`connectComponentsPlanner`], the field is no longer accepted in the context and is removed from the `cypherQueryOptions` object.
 
 == Additions
 
