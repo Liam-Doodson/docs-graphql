@@ -1,7 +1,10 @@
 name: graphql
 title: Neo4j GraphQL Library
 version: '6'
-display_version: '6-beta'
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/content-nav.adoc
+asciidoc:
+  attributes:
+    page-add-notes-module: ROOT
+    page-add-notes-tags: note

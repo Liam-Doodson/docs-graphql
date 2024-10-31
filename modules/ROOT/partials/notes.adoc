@@ -1,0 +1,7 @@
+# tag::note[]
+[CAUTION]
+====
+This is the documentation of the GraphQL Library version 6.
+For the long-term support (LTS) version 5, refer to link:{neo4j-docs-base-uri}/graphql/5/[GraphQL Library version 5 LTS].
+====
+# end::note[]
