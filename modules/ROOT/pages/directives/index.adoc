@@ -11,7 +11,7 @@ The Neo4j GraphQL Library provides the following directives to be used whilst de
 |===
 | Directive | Description
 
-| xref::/security/authentication.adoc#_authentication[`@authentication`]
+| xref::/security/authentication.adoc[`@authentication`]
 | Requires authentication checks when accessing the type.
 
 | xref::/security/authorization.adoc[`@authorization`]

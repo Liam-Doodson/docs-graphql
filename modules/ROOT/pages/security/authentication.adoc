@@ -9,10 +9,6 @@ Explicit authentication, configured with the `@authentication` directive, is onl
 Unauthenticated requests with queries requiring authentication never reach the database.
 ====
 
-== Definition
-
-// tba
-
 == Operations
 
 Authentication can be configured to only be validated on certain operations:
