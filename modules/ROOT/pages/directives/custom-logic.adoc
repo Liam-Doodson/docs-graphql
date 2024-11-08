@@ -387,10 +387,6 @@ directive @customResolver(
 
 === Usage
 
-// tba - an example without requires argument (?)
-
-==== The `requires` argument
-
 The `requires` argument can be used:
 
 * For a selection set string.
