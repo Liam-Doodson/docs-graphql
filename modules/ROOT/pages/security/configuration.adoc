@@ -146,7 +146,19 @@ By default, filtering is available on https://www.rfc-editor.org/rfc/rfc7519#sec
 
 Filtering can be configured for additional JWT claims using the `@jwt` directive and, in some circumstances, the `@jwtClaim` directive.
 
-=== The `@jwt` directive
+=== `@jwt`
+
+==== Definition
+
+[source, graphql, indent=0]
+----
+"""
+Instructs @neo4j/graphql that the flagged object represents the relevant JWT payload
+"""
+directive @jwt on OBJECT
+----
+
+==== Usage
 
 If you configure an additional `roles` claim, which is an array of strings located at the root of the JWT payload, add the following to the type definitions:
 
@@ -163,7 +175,24 @@ The type name `JWT` is not mandatory.
 You can use any name as long as it is decorated with the `@jwt` directive.
 ====
 
-=== The `@jwtClaim` directive
+=== `@jwtClaim`
+
+==== Definition
+
+[source, graphql, indent=0]
+----
+"""
+Instructs @neo4j/graphql that the flagged field has a mapped path within the JWT Payload.
+"""
+directive @jwtClaim(
+  """
+  The path of the field in the real JWT as mapped within the JWT Payload.
+  """
+  path: String!
+) on FIELD_DEFINITION
+----
+
+==== Usage
 
 A `roles` claim is not necessarily located at the JWT payload root.
 It can instead be in a nested location, for example under `myApplication`:
