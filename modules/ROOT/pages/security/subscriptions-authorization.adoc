@@ -7,9 +7,7 @@ These rules are different to authorization rules for queries and mutations becau
 
 All subscriptions authorization rules have an implied requirement for authentication, given that the rules are normally evaluated against values in the JWT payload.
 
-== Rules
-
-=== Filtering
+== Filtering rules
 
 Filtering rules prevent events which contain information that users don't have access to from reaching them - they will receive no indication that this is the case.
 These rules are evaluated when the events are returned from the database, before they are broadcasted out to subscribing GraphQL clients.
@@ -24,8 +22,6 @@ type User @subscriptionsAuthorization(filter: [
     id: ID!
 }
 ----
-
-==== Events
 
 Filtering can be configured to only be performed on certain events:
 
