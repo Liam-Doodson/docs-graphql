@@ -1,4 +1,4 @@
-= Operations
+= Operation examples
 //:page-aliases: /authentication-and-authorization/reference/operations.adoc, /security/reference/operations.adoc
 :description: This page describes how to set up authorization operations in the Neo4j GraphQL Library.
 
@@ -21,9 +21,7 @@ This also applies if the directive has no arguments because `operations` default
 
 The following examples apply to the `@authentication` directive, and also any rules within an `@authorization` directive.
 
-== Examples
-
-=== Query
+== Query
 
 For a simple query, rules with `READ` in the operations are evaluated for any type being read:
 
@@ -39,7 +37,7 @@ query {
 }
 ----
 
-=== Mutation
+== Mutation
 
 For `create` mutations, `CREATE` rules on the object are evaluated for each node created, as well as field definition rules:
 
@@ -105,7 +103,7 @@ mutation {
 }
 ----
 
-=== Subscription
+== Subscription
 
 For a simple subscription to creation events, both `SUBSCRIBE` and `READ` operations trigger rules:
 

@@ -7,7 +7,7 @@ They use predicates to evaluate the data accessed by the Cypher generated from a
 
 All authorization rules have an implied requirement for authentication, given that the rules are normally evaluated against values in the JWT payload.
 
-In the case of explicit authentication, configured using the `@authentication` directive, it is only ever evaluated during Cypher translation time.
+In the case of explicit authentication, configured using the xref::/security/authentication.adoc#_authentication[`@authentication`] directive, it is only evaluated during Cypher translation time.
 Unauthenticated requests with queries requiring authentication never reach the database.
 
 [WARNING]
@@ -16,9 +16,7 @@ The `@authorization` directive does not apply to subscriptions, it only applies 
 Instead, use xref::/security/subscriptions-authorization.adoc[`@subscriptionsAuthorization`] to configure the authorization for subscriptions if you intend to use subscriptions in your API and want the events protected.
 ====
 
-== Rules
-
-=== Filtering
+== Filtering rules
 
 Filtering rules filter out data which users do not have access to, without throwing any errors. 
 These rules are translated into filtering predicates, which are evaluated against matched data in the database.
@@ -42,7 +40,7 @@ type Post @node @authorization(filter: [
 }
 ----
 
-==== Operations
+=== Operations
 
 Filtering can be configured to only be performed on certain operations:
 
@@ -72,7 +70,7 @@ In case there is no `operations` argument with a list of operations, the GraphQL
 ====
 
 
-=== Validating
+== Validating rules
 
 Validating rules throw an error if a query is executed against data which users do not have access to. 
 These rules are evaluated in the database via filtering predicates containing calls to 
@@ -94,7 +92,7 @@ type User @node @authorization(validate: [
 }
 ----
 
-==== Operations
+=== Operations
 
 Validation can be configured to only be performed on certain operations:
 

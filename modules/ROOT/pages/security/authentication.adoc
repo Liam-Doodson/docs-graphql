@@ -5,7 +5,7 @@ The GraphQL Library offers the `@authentication` directive to configure authenti
 
 [IMPORTANT]
 ====
-Explicit authentication, configured with the `@authentication` directive, is only ever evaluated during Cypher translation time.
+Explicit authentication, configured with the `@authentication` directive, is only evaluated during Cypher translation time.
 Unauthenticated requests with queries requiring authentication never reach the database.
 ====
 
