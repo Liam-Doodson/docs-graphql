@@ -386,6 +386,11 @@ a|
 
 == Deprecations and warnings
 
+=== Removed the Object Graph Mapper (OGM)
+
+The OGM is discontinued with version 6.0.0 of the GraphQL Library.
+Version 5 (LTS) is the last version to feature the link:{neo4j-docs-base-uri}/graphql/5/ogm[OGM].
+
 === Implicit equality filters are deprecated
 
 The following implicit equality filters are deprecated: 
