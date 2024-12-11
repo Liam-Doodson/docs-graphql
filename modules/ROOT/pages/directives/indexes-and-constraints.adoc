@@ -378,7 +378,7 @@ Requires credentials for the plugin.
 Ensure your provider credentials are set in the call to Neo4jGraphQL, for example:
 
 .Feature configuration
-[source, graphql]
+[source, javascript]
 ----
 const neoSchema = new Neo4jGraphQL({
     typeDefs,
