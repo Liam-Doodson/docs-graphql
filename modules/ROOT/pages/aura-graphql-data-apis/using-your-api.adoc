@@ -1,8 +1,10 @@
 = Using your GraphQL API
 
+== Query your GraphQL API
+
 Once the status for the GraphQL API is `ready` you can send GraphQL requests to it. As all requests are subject to authentication, you must include an API key or JWT token.
 
-== With an API Key Authentication Provider
+=== With an API Key Authentication Provider
 
 Add `x-api-key: YOUR_API_KEY` to the header of the request. For example, with curl replacing the UPPERCASE values with those of your own:
 
@@ -11,7 +13,7 @@ Add `x-api-key: YOUR_API_KEY` to the header of the request. For example, with cu
 curl --location YOUR_GRAPHQL_API_URL --header 'Content-Type: application/json' --header 'x-api-key: YOUR_API_KEY' --data 'YOUR_GRAPHQL_QUERY'
 ----
 
-== With a JWKS Authentication Provider
+=== With a JWKS Authentication Provider
 
 Obtain a JWT from your identity provider. Using the JWT, add `Authorization: Bearer YOUR_JWT` to the headers of the request.
 
@@ -20,4 +22,31 @@ For example, with curl replacing the UPPERCASE values with those of your own:
 [source, bash, indent=0]
 ----
 curl --location  YOUR_GRAPHQL_API_URL --header 'Authorization: Bearer YOUR_JWT'--header 'Content-Type: application/json --data 'YOUR_GRAPHQL_QUERY'
+----
+
+== Query your GraphQL API from a Browser
+
+=== CORS (Cross-Origin Resource Sharing) Policy
+
+For security reasons, browsers restrict cross-origin requests to servers. This means that by default, if you configure a web app to make a request to your GraphQL APIs from a browser, it will fail. This is because your web app will be hosted at a different origin from your GraphQL API.
+
+However, most modern browsers support Cross-Origin Resource Sharing. This involves the browser sending a “preflight” request to the server to check that it will allow the actual request. You can configure your GraphQL APIs to allow cross-origin requests from your web app by adding it to the list of allowed origins. For example, if you expect requests to be made by a web app hosted at https://example.com, this should be added to the list of allowed origins for your GraphQL API.
+
+[NOTE]
+====
+Only exact matches for allowed origins are supported - wildcards (*) will not work
+====
+
+This can be done using the aura-cli using the following command, replacing the UPPERCASE values as required:
+
+[source, bash, indent=0]
+----
+aura-cli data-api graphql cors-policy allowed-origin add NEW_ALLOWED_ORIGIN --data-api-id YOUR_GRAPHQL_API_ID --instance-id YOUR_AURA_INSTANCE_ID
+----
+
+Allowed origins that are no longer required can be removed with the following command, replacing the UPPERCASE values as required:
+
+[source, bash, indent=0]
+----
+aura-cli data-api graphql cors-policy allowed-origin remove OLD_ALLOWED_ORIGIN --data-api-id YOUR_GRAPHQL_API_ID --instance-id YOUR_AURA_INSTANCE_ID
 ----
