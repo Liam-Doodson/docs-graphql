@@ -7,7 +7,7 @@ There are advantages and disadvantages of both types. API keys are quick to star
 
 [NOTE]
 ====
-`--data-api-id` is used with the `aura-cli` when working with authentication providers rather than `--graphql-api-id` as you might have expected. Conceptually a graphql api is a type of data api and there may be other types in the future. Using `--data-api-id` allows for flexibility for potential future development work in this area.
+`--data-api-id` is used with the `aura-cli` when working with authentication providers rather than `--graphql-api-id` as you might have expected. Conceptually a GraphQL API is a type of Data API and there may be other types in the future. Using `--data-api-id` allows for flexibility for potential future development work in this area.
 ====
 
 == Create a JWKS Authentication Provider
