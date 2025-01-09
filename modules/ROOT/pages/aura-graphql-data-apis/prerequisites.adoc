@@ -1,8 +1,8 @@
 = Prerequisites
 
-Management of the beta of GraphQL for Neo4j AuraDB is performed using the Aura CLI command line tool. Future versions will be fully integrated with the Aura Console. The Aura CLI will need to be installed and configured for this purpose.
+Management of the beta of GraphQL for Neo4j AuraDB is performed using the Aura CLI command line tool which will need to be installed. Future versions of GraphQL for Neo4j AuraDB will be fully integrated with the Aura Console.
 
-== Read This Before you Start
+== Read This Before You Start
 
 Using the GraphQL API during the Open Beta will be at no cost to you. Usage of the associated AuraDB instance will be charged as normal unless you’re using Aura Pro Trials which, as the name suggests, is a zero-cost option.
 
