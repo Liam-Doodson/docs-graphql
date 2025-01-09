@@ -1,0 +1,23 @@
+= Using your GraphQL API
+
+Once the status for the GraphQL API is `ready` you can send GraphQL requests to it. As all requests are subject to authentication, you must include an API key or JWT token.
+
+== With an API Key Authentication Provider
+
+Add `x-api-key: YOUR_API_KEY` to the header of the request. For example, with curl replacing the UPPERCASE values with those of your own:
+
+[source, bash, indent=0]
+----
+curl --location YOUR_GRAPHQL_API_URL --header 'Content-Type: application/json' --header 'x-api-key: YOUR_API_KEY' --data 'YOUR_GRAPHQL_QUERY'
+----
+
+== With a JWKS Authentication Provider
+
+Obtain a JWT from your identity provider. Using the JWT, add `Authorization: Bearer YOUR_JWT` to the headers of the request.
+
+For example, with curl replacing the UPPERCASE values with those of your own:
+
+[source, bash, indent=0]
+----
+curl --location  YOUR_GRAPHQL_API_URL --header 'Authorization: Bearer YOUR_JWT'--header 'Content-Type: application/json --data 'YOUR_GRAPHQL_QUERY'
+----
