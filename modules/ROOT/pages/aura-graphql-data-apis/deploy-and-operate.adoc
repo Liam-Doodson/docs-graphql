@@ -1,19 +1,19 @@
 = Deploy and Operate
 
-== Deploy a GraphQL Data API
+== Deploy a GraphQL API
 
 
-Deploying a GraphQL Data API requires you first to have completed the steps in xref::/aura-graphql-data-apis/prerequisites.adoc[Prerequisites]. Of particular importance is that you have:
+Deploying a GraphQL API requires you first to have completed the steps in xref::/aura-graphql-data-apis/prerequisites.adoc[Prerequisites]. Of particular importance is that you have:
 
 * The ID, username and password for the AuraDB
 * A file containing the type definitions
 
-You are now ready to create the GraphQL Data API with the Aura CLI. Substitute the values in `CAPITALS` to match your setup:
+You are now ready to create the GraphQL API with the Aura CLI. Substitute the values in `CAPITALS` to match your setup:
 
 [source, bash, indent=0]
 ----
-aura-cli data-api graphql create --name YOUR-FRIENDLY-NAME --instance-id YOUR-AURA-INSTANCE-ID --instance-username YOUR-AURA-INSTANCE-USER --instance-password YOUR-AURA-INSTANCE-PASSWORD --type-definitions-file
-FULL-PATH-TO-YOUR-TYPE-DEFS --await
+aura-cli data-api graphql create --name YOUR_FRIENDLY_NAME --instance-id YOUR_AURA_INSTANCE_ID --instance-username YOUR_AURA_INSTANCE_USER --instance-password YOUR_AURA_INSTANCE_PASSWORD --type-definitions-file
+FULL_PATH_TO_YOUR_TYPE_DEFS --await
 ----
 
 [NOTE]
@@ -23,51 +23,51 @@ Make sure to record the API key shown in the response as it will not be displaye
 
 There are other items of note in the response:
 
-* `id`: unique identifier for the GraphQL Data API
-* `status`: tells you if the GraphQL Data API is ready to receive requests
-* `url`: the connection address to access the Data API
+* `id`: unique identifier for the GraphQL API
+* `status`: tells you if the GraphQL API is ready to receive requests
+* `url`: the connection address to access the GraphQL API
 
-To check if the GraphQL Data API is ready for requests, use the Aura CLI again, changing `YOUR-AURA-INSTANCE-ID` for the ID of your aura instance.
+To check if the GraphQL API is ready for requests, use the Aura CLI again, changing `YOUR_AURA_INSTANCE_ID` for the ID of your aura instance.
 
 [source, bash, indent=0]
 ----
-aura-cli data-api graphql list --instance-id YOUR-AURA-INSTANCE-ID
+aura-cli data-api graphql list --instance-id YOUR_AURA_INSTANCE_ID
 ----
 
-When the status changes to `ready`, the GraphQL Data API is available for servicing requests.
+When the status changes to `ready`, the GraphQL API is available for servicing requests.
 
-== Modifying an Existing GraphQL Data API
+== Modifying an Existing GraphQL API
 
-It is possible to change the configuration of an existing GraphQL Data API. The following properties can be modified:
+It is possible to change the configuration of an existing GraphQL API. The following properties can be modified:
 
-* Friendly name of the GraphQL Data API
+* Friendly name of the GraphQL API
 * Username and/or password for the associated Aura instance
 * Type definitions
 
-To do this, use the Aura CLI update command which requires IDs of the GraphQL Data API and it’s linked AuraDB instance. The format of this Aura CLI command is as follows:
+To do this, use the Aura CLI update command which requires IDs of the GraphQL API and it’s linked AuraDB instance. The format of this Aura CLI command is as follows:
 
 [source, bash, indent=0]
 ----
-aura-cli data-api graphql update YOUR-DATA-API-ID --instance-id YOUR-AURA-INSTANCE-ID <flags>
+aura-cli data-api graphql update YOUR_GRAPHQL_API_ID --instance-id YOUR_AURA_INSTANCE_ID <flags>
 ----
 
-As the change takes a few moments to fully implement, you should check the status of the GraphQL Data API after performing this operation; if the status is `updating` then the change is still being processed. When the change is committed, the status will return to `ready`.
+As the change takes a few moments to fully implement, you should check the status of the GraphQL API after performing this operation; if the status is `updating` then the change is still being processed. When the change is committed, the status will return to `ready`.
 
 
-Additionally, it is possible to modify the authentication providers of a GraphQL Data APIs. More on what these are and how to do this xref::/aura-graphql-data-apis/authentication-providers.adoc[here].
+Additionally, it is possible to modify the authentication providers of GraphQL APIs. More on what these are and how to do this xref::/aura-graphql-data-apis/authentication-providers.adoc[here].
 
-== Deleting a GraphQL Data API
+== Deleting a GraphQL API
 
-When you no longer require the GraphQL Data API then delete it by using the Aura CLI delete command. This will require the Aura instance ID and ID of the GraphQL Data API.
+When you no longer require the GraphQL API then delete it by using the Aura CLI delete command. This will require the Aura instance ID and ID of the GraphQL API.
 
 The format of this command is as follows:
 
 [source, bash, indent=0]
 ----
-aura-cli data-api graphql delete YOUR-DATA-API-ID --instance-id YOUR-AURA-INSTANCE-ID
+aura-cli data-api graphql delete YOUR_GRAPHQL_API_ID --instance-id YOUR_AURA_INSTANCE_ID
 ----
 
 [NOTE]
 ====
-There is no additional confirmation - the GraphQL Data API will start to be deleted as soon as you press the Enter key!
+There is no additional confirmation - the GraphQL API will start to be deleted as soon as you press the Enter key!
 ====
