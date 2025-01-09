@@ -3,7 +3,7 @@
 
 GraphQL for Neo4j AuraDB allows you to use an API key, JWT token from an external identity provider or both for authentication and switch between them as needed. The authentication method is stored as an authentication provider.
 
-There are advantages and disadvantages of both types. API keys are quick to start working with but do not allow for access controls. JWKS (JSON Web Key Sets) authentication providers require an external identity provider but do allow for fine grained rules around authentication/authorization.
+There are advantages and disadvantages of both types. API keys are quick to start working with but do not allow for access controls and should not be used within a user facing-client application. JWKS (JSON Web Key Sets) authentication providers require an external identity provider but do allow for fine grained rules around authentication/authorization.
 
 [NOTE]
 ====
@@ -12,7 +12,7 @@ There are advantages and disadvantages of both types. API keys are quick to star
 
 == Create a JWKS Authentication Provider
 
-Before using JWKS, it is necessary to set up and configure an identity provider that manages users and their credentials securely, issues JWTs to authenticated users, and hosts a JWKS endpoint that is can be used to validate JWTs by the GraphQL API. There are several 3rd parties who provide this type of service, e.g Ping, Okta, Auth0 and any of the main cloud service providers. Configuration of identity providers is beyond the scope of this guide.
+Before using JWKS authentication providers, it is necessary to set up and configure an identity provider that manages users and their credentials securely, issues JWTs to authenticated users, and hosts a JWKS endpoint that is can be used to validate JWTs by the GraphQL API. There are several 3rd parties who provide this type of service, e.g Ping, Okta, Auth0 and any of the main cloud service providers. Configuration of identity providers is beyond the scope of this guide.
 
 If you do use a JWKS authentication provider, then you can take advantage of fine-grained access controls using the ** xref:security/authentication.adoc[`@authentication`]/** xref:security/authorization.adoc[`@authorization`] directives of Graphql for Neo4j AuraDB.
 
@@ -33,6 +33,11 @@ aura-cli data-api graphql auth-provider create --data-api-id YOUR_GRAPHQL_DATA_A
 On success, the command will respond with details about the newly created JWKS provider.
 
 == Create an API Key Authentication Provider
+
+[WARNING]
+====
+If you use an API key authentication provider in a user-facing client application, you risk leaking the API key to your users. This could potential give them full access to your GraphQL API. For these usecases, we recommend using JWKS authentication providers.
+====
 
 When a new GraphQL API is created via the aura-cli, an API Key authentication provider is the default. However, if you require a new one, this command allows you to create a new API Key.
 
