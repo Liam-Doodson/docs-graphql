@@ -12,5 +12,5 @@ You can help us get GraphQL for Neo4j AuraDB ready for production:
 - *Dive in*: Explore and test its features.
 - *Test the product limits*: We'd rather discover weak areas at this stage.
 - *Share your experience*: Tell us what works, what doesn't, and what you'd like to see in the future.
-- *Stay in touch*: Use email (`jon.giffard@neo4j.com`), our `#graphql` channel on our https://discord.gg/M8mTADEJ[Discord Community], or our https://community.neo4j.com/c/drivers-stacks/graphql/33[forums] to report issues, suggest improvements, or ask questions.
+- *Provide feedback*: Use email (`jon.giffard@neo4j.com`), our `#graphql` channel on our link:https://discord.gg/M8mTADEJ[Discord Community], or our link:https://community.neo4j.com/c/drivers-stacks/graphql/33[forums] to report issues, suggest improvements, or ask questions.
 
