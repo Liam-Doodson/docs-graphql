@@ -2,20 +2,15 @@
 
 Welcome to the beta release of GraphQL for Neo4j AuraDB.
 
-We are thrilled to have you join us at this exciting stage of our journey. Participating is more than just trying out this feature – your feedback and insights will directly influence how we refine and evolve its future to meet the needs of users like you.
+Your feedback and insights help us refine and evolve the product and meet the needs of our users.
 
-This beta release is designed to give you a first look at *GraphQL for Neo4j AuraDB*. While we’ve worked hard to ensure a functional and valuable experience, there is the chance that you may encounter suboptimal behavior. We see these occasions as chances to listen, learn, and improve before *GraphQL for Neo4j AuraDB* is released to all of our customers.
+The beta release is designed to give you a first look at GraphQL for Neo4j AuraDB.
+You may encounter suboptimal behavior.
 
-Here’s how you can help us get *GraphQL for Neo4j AuraDB* ready for production:
+You can help us get GraphQL for Neo4j AuraDB ready for production:
 
-- *Dive in*: Explore and test its features to your heart’s content.
-- *Break stuff*: We’d rather discover weak areas at this stage – go for it, don’t hold back.
+- *Dive in*: Explore and test its features.
+- *Test the product limits*: We'd rather discover weak areas at this stage.
 - *Share your experience*: Tell us what works, what doesn't, and what you'd like to see in the future.
 - *Stay in touch*: Use email (`jon.giffard@neo4j.com`), our `#graphql` channel on our https://discord.gg/M8mTADEJ[Discord Community], or our https://community.neo4j.com/c/drivers-stacks/graphql/33[forums] to report issues, suggest improvements, or ask questions.
 
-We value your time, creativity, and honest feedback – thank you for your trust and collaboration.
-
-Sincerely,
-
-Jonathan Giffard
-The GraphQL Team at Neo4j
