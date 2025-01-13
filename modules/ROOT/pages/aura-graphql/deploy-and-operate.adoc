@@ -3,7 +3,7 @@
 == Deploy a GraphQL API
 
 
-Before you deploy a GraphQL API, complete the steps in xref::/aura-graphql-data-apis/prerequisites.adoc[Prerequisites].
+Before you deploy a GraphQL API, complete the steps in xref::/aura-graphql/prerequisites.adoc[Prerequisites].
 Make sure that you have:
 
 * The ID, username and password for the AuraDB.
@@ -21,7 +21,7 @@ FULL_PATH_TO_YOUR_TYPE_DEFS --await
 [NOTE]
 ====
 Make sure to record the API key shown in the response as it will not be displayed again.
-If the API key is lost, a new one can be created by following the steps to create a new API key auth provider in xref::/aura-graphql-data-apis/authentication-providers.adoc[Authentication providers].
+If the API key is lost, a new one can be created by following the steps to create a new API key auth provider in xref::/aura-graphql/authentication-providers.adoc[Authentication providers].
 ====
 
 There are other items of note in the response:
@@ -61,7 +61,7 @@ If the status is `updating` then the change is still being processed.
 When the change is committed, the status will return to `ready`.
 
 Additionally, it is possible to modify the authentication providers of GraphQL APIs.
-To learn more, see xref::/aura-graphql-data-apis/authentication-providers.adoc[Authentication providers].
+To learn more, see xref::/aura-graphql/authentication-providers.adoc[Authentication providers].
 
 == Deleting a GraphQL API
 
